@@ -40,7 +40,7 @@ placar.color("white")
 placar.penup()
 placar.hideturtle()
 placar.goto(0, 260)
-placar.write("Jogador A: 0 Jogador B: 0", align="center", font=("Century Schoolbook L", 24, "normal"))
+placar.write("Jogador A: 0 Jogador B: 0", align="center", font=("Arial", 24, "normal"))
 
 # Variáveis para guardar os pontos dos jogadores
 pontos_a = 0
@@ -79,17 +79,17 @@ while True:
     janela.update() # Atualizar a janela do jogo
 
     # Colocar Limite que dê para mover cada raquete
-    if raquete_a.ycor() > 280: # Se a raquete ultrapassar o limite superior da janela (300 - 10)
-        raquete_a.sety(280) # Colocar a raquete na posição limite superior (290)
+    if raquete_a.ycor() > 280: # Se a raquete ultrapassar o limite superior da janela (300 - 20)
+        raquete_a.sety(280) # Colocar a raquete na posição limite superior (280)
         
-    if raquete_a.ycor() < -280: # Se a raquete ultrapassar o limite inferior da janela (300 - 10)
-        raquete_a.sety(-280) # Colocar a raquete na posição limite inferior (-290)    
+    if raquete_a.ycor() < -280: # Se a raquete ultrapassar o limite inferior da janela (300 - 20)
+        raquete_a.sety(-280) # Colocar a raquete na posição limite inferior (-280)    
         
-    if raquete_b.ycor() > 280: # Se a raquete ultrapassar o limite superior da janela (300 - 10)
-        raquete_b.sety(280) # Colocar a raquete na posição limite superior (290)
+    if raquete_b.ycor() > 280: # Se a raquete ultrapassar o limite superior da janela (300 - 20)
+        raquete_b.sety(280) # Colocar a raquete na posição limite superior (280)
         
-    if raquete_b.ycor() < -280: # Se a raquete ultrapassar o limite inferior da janela (300 - 10)
-        raquete_b.sety(-280) # Colocar a raquete na posição limite inferior (-290)    
+    if raquete_b.ycor() < -280: # Se a raquete ultrapassar o limite inferior da janela (300 - 20)
+        raquete_b.sety(-280) # Colocar a raquete na posição limite inferior (-280)    
 
     # Mover a bola
     bola.setx(bola.xcor() + bola.dx) # Atualizar a coordenada x da bola somando o valor de dx
@@ -109,17 +109,18 @@ while True:
         bola.dx *= -1 # Inverter o sinal de dx para fazer a bola mudar de direção
         pontos_a += 1 # Adicionar um ponto ao jogador A
         placar.clear() # Limpar o placar anterior
-        placar.write(f"Jogador A: {pontos_a} Jogador B: {pontos_b}", align="center", font=("Century Schoolbook L", 24, "normal")) # Escrever o novo placar
+        placar.write(f"Jogador A: {pontos_a} Jogador B: {pontos_b}", align="center", font=("Arial", 24, "normal")) # Escrever o novo placar
 
     if bola.xcor() < -390: # Se a bola ultrapassar o limite esquerdo da janela (-400 + 10)
         bola.goto(0, 0) # Colocar a bola na posição inicial (0, 0)
         bola.dx *= -1 # Inverter o sinal de dx para fazer a bola mudar de direção
         pontos_b += 1 # Adicionar um ponto ao jogador B
         placar.clear() # Limpar o placar anterior
-        placar.write(f"Jogador A: {pontos_a} Jogador B: {pontos_b}", align="center", font=("Century Schoolbook L", 24, "normal")) # Escrever o novo placar
+        placar.write(f"Jogador A: {pontos_a} Jogador B: {pontos_b}", align="center", font=("Arial", 24, "normal")) # Escrever o novo placar
         
     # Verificar as colisões com as raquetes
     if (bola.xcor() > 340 and bola.xcor() < 350) and (bola.ycor() < raquete_b.ycor() + 50 and bola.ycor() > raquete_b.ycor() - 50): 
+        
     # Se a bola estiver entre as coordenadas x da raquete B e entre as coordenadas y da raquete B
         bola.setx(340) # Colocar a bola na posição limite direita da raquete B (350 - 10)
         bola.dx *= -1 # Inverter o sinal de dx para fazer a bola mudar de direção
