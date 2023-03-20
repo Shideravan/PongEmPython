@@ -26,7 +26,7 @@ Para jogar este jogo, você precisa usar as teclas do teclado para mover as raqu
 
 O jogo termina quando um dos jogadores alcança 10 pontos ou quando você fecha a janela do jogo.
 
-## Explicação do código
+## Partes do código
 O código deste projeto está dividido em várias partes:
 
 - Importação do módulo turtle
