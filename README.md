@@ -4,7 +4,7 @@ Este é um projeto simples que usa o módulo turtle do Python para criar um jogo
 ## Requisitos
 Para rodar este projeto, você precisa ter o Python 3 ou superior instalado no seu computador. Você pode baixar o Python no site oficial: <https://www.python.org/downloads/>
 
-Você também precisa ter o módulo turtle instalado no seu computador. O módulo turtle é uma biblioteca gráfica padrão do Python que permite criar desenhos e animações usando objetos chamados turtles (tartarugas). Você pode instalar o módulo turtle usando o pip, que é um gerenciador de pacotes do Python. Para isso, abra o terminal ou o prompt de comando e digite:
+Você também precisa ter o módulo _turtle_ instalado no seu computador. O módulo turtle é uma biblioteca gráfica padrão do Python que permite criar desenhos e animações usando objetos chamados turtles (tartarugas). Você pode instalar o módulo turtle usando o pip, que é um gerenciador de pacotes do Python. Para isso, abra o terminal ou o prompt de comando e digite:
 
 ```
 pip install turtle
